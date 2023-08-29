@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Parcial 1</title>
+</head>
+<body>
+	<audio autoplay loop controls>
+        <source src="C:\Users\david\OneDrive\Documentos\AUNIVERSIDAD\SO I\HTML\Parcial1\Familia PLuche.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+    <header>
+        <div class="header-content">
+            <h1>Apuntes del Parcial 1</h1>
+            <a href="https://github.com/ElMemelitas/Particiones" target="_blank"><button class="boton">Partciones de memoria</button></a>
+        </div>
+    </header>
+	
+	<div class="acordeon">
+        <h2 class="titulo" onclick="toggleAcordeon(this)">Que es un Sistema Operativo</h2>
+        <div class="contenido">
+            <p>Software principal de todo dispositivo electrónico que administra todo el entorno siendo intermediario entre el hardware, aplicaciones y usuario.</p>
+        </div>
+        
+        <h2 class="titulo" onclick="toggleAcordeon(this)">Historia</h2>
+        <div class="contenido">
+            <p><strong>Etapa 0. Computadoras de propósito particular.</strong><br>
+Las primeras computadoras electromecánicas se realizaron ciertos propósitos específicos. En el caso de Mark II, este propósito fue el calculo de tablas de tiro para la Marina al final de la WWII.
+			</p>
+			<p><strong>Etapa 1. Computadoras comerciales monoproceso.</strong><br>
+Con el éxito de las primeras computadoras electromecánicas, el uso de dispositivos electrónicos, como los tubos de vacío y después los transistores, y con los avances en materia de lenguajes de programación como el ensamblador, los compiladores y las subrutinas, resultó rentable el desarrollo de computadoras comerciales como la UNIVAC o los sistemas 360 de IBM.
+<br>- Cintas y tarjetas perforadas, y después cintas magnéticas.
+<br>- COBOL a Fortran. <br>En esta etapa, el sistema operativo consta sobre todo de los programas para el procesamiento por lotes, las bibliotecas y los lenguajes para soportar el desarrollo de las aplicaciones y el manejo de los dispositivos de entrada y salida.
+			</p>
+			<p><strong>Etapa 2. Multiproceso.</strong><br>
+Aparece lenguajes como C, Lisp o prolog.<br>
+Se comienza el desarrollo de núcleos (Kernel). El corazón del sistema operativo.
+			</p>
+			<p><strong>Etapa 3. Cómputo personal.</strong><br>
+Las computadoras que integraron mejor el uso de redes de área local a sus sistemas operativos y a sus arquitecturas de hardware tuvieron una ventaja competitiva importante.<br>
+Linus Torvalds inició un proyecto de kernel simplificado, monolítico y dependiente de la arquitectura 80x86.				
+			</p>
+			<p><strong>Etapa 4. Masificación de la Internet.</strong><br>
+Se masifica las redes.<br>ARPANET. Red de computadoras por el departamento de defensa de estados unidos.<br>
+DNS. Sistema de nombres de dominio. Trabaja con las direcciones ip, Google 8.8.8.8<br>
+HTTP. Protocolo de transferencia de datos. Hablar el mismo idioma.<br>WWW.<br>				
+			</p>
+			<p><strong>Etapa 5. Computo ubicuo.</strong><br>
+Ubicuo (término en latín que significa en todas partes)<br>
+RFID<br>
+IA				
+			</p>
+			<p><strong>Etapa 6. Internet de cosas.</strong><br>
+Internet of Things IOT				
+			</p>
+        </div>
+		
+		<h2 class="titulo" onclick="toggleAcordeon(this)">Funciones y objetivos del sistema operativo</h2>
+        <div class="contenido">
+            <p>El sistema operativo es el único programa que interactúa directamente con el hardware de la computadora.<br>Sus funciones primarias son:<br></p>
+<p><strong>Abstracción:</strong><br>
+Los programas no deben tener que preocuparse de los detalles de acceso a hardware, o de la configuración particular de una computadora.<br>
+El sistema operativo se encarga de proporcionar una serie de abstracciones para que los programadores puedan enfocarse en resolver las necesidades particulares de sus usuarios.<br>
+Un ejemplo de tales abstracciones es que la información está organizada en archivos y directorios (en uno o muchos dispositivos de almacenamiento).
+			</p>
+			<p><strong>Administración de recursos:</strong><br>
+Memoria, espacio de almacenamiento, tiempo de procesamiento, etc.<br>
+Los diferentes procesos que se ejecuten en el compiten por ellos, el sistema operativo puede implementar políticas que los asignen de forma efectiva y acorde a las necesidades establecidas para dicho sistema.				
+			</p>
+			<p><strong>Aislamiento:</strong><br>
+Es un sistema multiusuario y multitarea cada proceso y cada usuario no tendrá que preocuparse por otros que estén usando el mismo sistema.				
+			</p>
+        </div>
+		
+		<h2 class="titulo" onclick="toggleAcordeon(this)">Evolución de los sistemas operativos</h2>
+        <div class="contenido">
+    <p><strong>Proceso por lotes (batch processing)</strong></p>
+    <p>En los años cincuenta aparecieron los dispositivos perforadores/lectores de tarjetas de papel, los programadores entregaban su lote de tarjetas perforadas (en inglés, batches) a los operadores, quienes las alimentaban a los dispositivos lectores, que lo cargaban en memoria en un tiempo razonable, iniciaban y monitoreaban la ejecución, y producían los resultados.</p>
+    
+    <p><strong>Sistemas en lotes con dispositivo de carga (spool)</strong></p>
+    <p>Es el proceso donde mediante la computadora introduce trabajos en buffer (área especial en memoria o disco) de manera que un dispositivo (ejemplo impresor) para acceder cuando esté listo.</p>
+    
+    <p><strong>Sistema multiprogramados</strong></p>
+    <p>La programación multitareas o los sistemas multiprogramados buscaban maximizar el tiempo de uso efectivo del procesador ejecutando varios procesos al mismo tiempo.</p>
+    <p>Resultó necesario que apareciera la infraestructura de protección de recursos: un proceso no debe sobrescribir el espacio de memoria de otro (ni el código, ni los datos), esta protección se encuentra en la Unidad de Manejo de Memoria (MMU).</p>
+    
+    <p><strong>Sistemas de tiempo compartido</strong></p>
+    <ul>
+        <li>Interactivos y multiusuarios</li>
+        <li>Nunca más estará simplemente esperando a qué esté listo un programa.</li>
+        <li>Fueron naciendo de forma natural y paulatina las abstracciones que se conocen hoy en día, como los conceptos de archivos y directorios.</li>
+    </ul>
+</div>
+		
+		<h2 class="titulo" onclick="toggleAcordeon(this)">Clasificación de los sistemas operativos</h2>
+        <div class="contenido">
+    <p>Existen diversas clasificaciones de los sistemas operativos, la más común es por los servicios que ofrecen al usuario final:</p>
+    <p><strong>Sistemas operativos monousuarios</strong></p>
+    <p>Soportan a un usuario a la vez, sin importar el número de procesadores que tenga la computadora o el número de procesos o tareas que el usuario pueda ejecutar en un mismo instante de tiempo. (Computadoras personales)</p>
+    
+    <p><strong>Sistemas operativos multiusuarios</strong></p>
+    <p>Dan servicio a más de un usuario a la vez, ya sea por medio de varias terminales conectadas a la computadora o por medio de sesiones remotas en una red de comunicaciones.</p>
+    
+    <p><strong>Sistemas operativos monotareas</strong></p>
+    <p>Sólo permiten una tarea a la vez por usuario.</p>
+    
+    <p><strong>Sistemas operativos multitareas</strong></p>
+    <p>Permite al usuario estar realizando varias labores al mismo tiempo.</p>
+    
+    <p><strong>Sistemas operativos uniproceso</strong></p>
+    <p>Capaz de manejar solamente un procesador de la computadora, de manera que si la computadora tuviese más de uno le sería inútil. El ejemplo más típico de este tipo de sistemas es el DOS.</p>
+    
+    <p><strong>Sistemas operativos multiproceso</strong></p>
+    <p>Se refiere al número de procesadores del sistema, que es más de uno y éste es capaz de usarlos todos para distribuir su carga de trabajo.</p>
+</div>
+		
+		<h2 class="titulo" onclick="toggleAcordeon(this)">Modelos de Sistemas Operativos (para un solo usuario)</h2>
+        <div class="contenido">
+    <p>Donde un individuo utiliza una computadora o dispositivo para sus propias tareas y actividades.</p>
+    <p>Proporciona herramientas para administrar archivos, ejecutar aplicaciones y realizar tareas en la computadora de manera cómoda y segura.</p>
+    
+    <h3><strong>Estructura de un modelo para un solo usuario.</strong></h3>
+    <ul>
+        <li><strong>Kernel del Sistema Operativo:</strong>
+            <ul>
+                <li>Es el corazón del sistema operativo.</li>
+                <li>Administra los recursos del hardware, como la memoria y la CPU.</li>
+                <li>Proporciona una interfaz para que las aplicaciones y el usuario interactúen con el sistema.</li>
+            </ul>
+        </li>
+        <li><strong>Interfaz de usuario:</strong>
+            <ul>
+                <li>Ofrece una interfaz de usuario amigable para que el usuario interactúe con el sistema.</li>
+                <li>Esto puede ser una interfaz gráfica de usuario (GUI) o una interfaz de línea de comandos (CLI).</li>
+            </ul>
+        </li>
+        <li><strong>Gestión de archivos:</strong>
+            <ul>
+                <li>El SO maneja la organización y el acceso a los archivos y directorios.</li>
+                <li>Los usuarios pueden crear, abrir, modificar, mover y eliminar archivos utilizando comandos o una interfaz gráfica.</li>
+            </ul>
+        </li>
+        <li><strong>Gestión de procesos:</strong>
+            <ul>
+                <li>El sistema operativo administra los procesos en ejecución.</li>
+                <li>Puede haber múltiples aplicaciones en ejecución al mismo tiempo.</li>
+                <li>El SO se encarga de programar y asignar tiempo de CPU a cada proceso.</li>
+            </ul>
+        </li>
+        <li><strong>Gestión de memoria:</strong>
+            <ul>
+                <li>Administra la memoria del sistema, asegurando que las aplicaciones tengan suficiente espacio para ejecutarse.</li>
+                <li>Esto puede incluir administración de memoria virtual y técnicas de paginación.</li>
+            </ul>
+        </li>
+        <li><strong>Gestión de dispositivos:</strong>
+            <ul>
+                <li>El sistema operativo maneja la comunicación entre las aplicaciones y los dispositivos periféricos E/S.</li>
+            </ul>
+        </li>
+        <li><strong>Seguridad y autenticación:</strong>
+            <ul>
+                <li>Proporciona mecanismos de seguridad para proteger los datos del usuario y su privacidad (contraseñas, sistemas de archivos encriptados y cortafuegos básicos).</li>
+            </ul>
+        </li>
+        <li><strong>Redes:</strong>
+            <ul>
+                <li>Proporciona capacidades de red para permitir que el usuario se conecte a Internet y otros dispositivos en red.</li>
+            </ul>
+        </li>
+        <li><strong>Actualizaciones y mantenimiento:</strong>
+            <ul>
+                <li>Puede proporcionar actualizaciones automáticas y herramientas de mantenimiento para asegurarse de que el sistema está actualizado y funcionando correctamente.</li>
+            </ul>
+        </li>
+        <li><strong>Aplicaciones:</strong>
+            <ul>
+                <li>Puede incluir aplicaciones preinstaladas o proporcionar una tienda de aplicaciones donde el usuario puede descargar e instalar programas adicionales.</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+		
+		<h2 class="titulo" onclick="toggleAcordeon(this)">Gestión de memoria</h2>
+        <div class="contenido">
+		<h3><strong>Antecedentes</strong></h3>
+    <ul>
+        <li><strong>Un programa debe cargarse en memoria desde disco y colocarse dentro de un proceso para que se ejecute.</strong></li>
+        <li><strong>La memoria principal y los registros son los únicos dispositivos de almacenamiento a los que puede acceder la CPU directamente.</strong></li>
+        <li><strong>El acceso a registro es muy rápido; supone un ciclo de CPU (o menos).</strong></li>
+        <li><strong>El acceso a memoria principal puede durar varios ciclos.</strong></li>
+        <li><strong>Las memorias caché se colocan entre la memoria principal y la CPU para acelerar el acceso a la información.</strong></li>
+    </ul>
+    
+    <h3><strong>Espacio de Direcciones Físicas y Lógicas</strong></h3>
+    <ul>
+        <li><strong>El concepto de espacio de direcciones lógicas vinculado a un espacio de direcciones físicas separado es crucial para una buena gestión de memoria.</strong></li>
+        <li>Dirección lógica - es la dirección que genera el proceso; también se conoce como dirección virtual.</li>
+        <li>Dirección física – dirección que percibe la unidad de memoria.</li>
+        <li>Las direcciones lógicas y físicas son iguales en los esquemas de vinculación en tiempo de compilación y de carga; pero difieren en el esquema de vinculación en tiempo de ejecución.</li>
+    </ul>
+    
+    <h3><strong>Asignación de Espacio Contiguo</strong></h3>
+    <ul>
+        <li>La memoria principal se encuentra dividida en dos partes:</li>
+        <ul>
+            <li>SO residente (kernel), normalmente en posiciones bajas de la memoria junto al vector de interrupciones.</li>
+            <li>Zona para los procesos de usuario, normalmente en posiciones altas de memoria.</li>
+        </ul>
+        <li>La zona para procesos de usuarios se encuentra dividida a su vez en varias particiones que se asignarán a los procesos.</li>
+        <ul>
+            <li>Particionamiento estático: las particiones se establecen en el momento de arranque del SO y permanecen fijas durante todo el tiempo.</li>
+            <li>Particionamiento dinámico: las particiones cambian de acuerdo a los requisitos de los procesos.</li>
+        </ul>
+    </ul>
+</div>
+    </div>
+
+    <script>
+        function toggleAcordeon(titulo) {
+            titulo.classList.toggle("activo");
+            var contenido = titulo.nextElementSibling;
+            if (contenido.style.maxHeight) {
+                contenido.style.maxHeight = null;
+            } else {
+                contenido.style.maxHeight = contenido.scrollHeight + "px";
+            }
+        }
+    </script>
+	
+</body>
+</html>
